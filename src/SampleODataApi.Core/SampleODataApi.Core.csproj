@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      
+      <!-- Application - General -->
+      <OutputType>Library</OutputType>
+      <TargetFramework>net10.0</TargetFramework>
+      <AssemblyName>TsxCode.$(MSBuildProjectName)</AssemblyName>
+      <RootNamespace>TsxCode.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+
+      <!-- Application - Dependencies -->
+      <NuGetAudit>True</NuGetAudit>
+      <NuGetAuditMode>all</NuGetAuditMode>
+
+      <!-- Global Usings - General -->
+      <ImplicitUsings>enable</ImplicitUsings>
+
+      <!-- Build - General -->
+      <Nullable>enable</Nullable>
+
+      <!-- Build - Errors and warnings -->
+      <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+
+      <!-- Build - Output -->
+      <GenerateDocumentationFile>True</GenerateDocumentationFile>
+
+      <!-- Code Analysis - All analyzers -->
+      <RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
+      <RunAnalyzersDuringLiveAnalysis>True</RunAnalyzersDuringLiveAnalysis>
+
+      <!-- Code Analysis - .NET analyzer -->
+      <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+      <EnableNETAnalyzers>True</EnableNETAnalyzers>
+      <AnalysisLevel>latest</AnalysisLevel>
+      
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="9.4.1" />
+  </ItemGroup>
+
+</Project>

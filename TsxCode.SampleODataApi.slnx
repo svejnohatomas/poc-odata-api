@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SampleODataApi.Core/SampleODataApi.Core.csproj" Id="514e8b13-c00b-467a-95d2-320abf9591e0" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>

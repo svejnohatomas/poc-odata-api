@@ -1,0 +1,33 @@
+# This .editorconfig file is used to configure code style and formatting settings for C# projects
+# For more information, see https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options
+
+# Remove the line below if you want to inherit .editorconfig settings from higher directories
+root = true
+
+###########################################
+############# Global settings #############
+###########################################
+
+# Apply these settings to all files
+[*]
+
+## Indentation and spacing
+indent_style = space
+indent_size = 4
+tab_width = 4
+
+## New line preferences
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+## Spell Checker
+spelling_exclusion_path = ./exclusion.dic # Example: https://github.com/dotnet/sdk/blob/main/exclusion.dic
+
+############################################
+################# C# files #################
+############################################
+[*.cs]
+
+# License header
+file_header_template = Copyright (c) 2026 Tomas Svejnoha. All rights reserved.
