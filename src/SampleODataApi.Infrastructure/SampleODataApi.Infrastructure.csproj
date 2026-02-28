@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+
+        <!-- Application - General -->
+        <OutputType>Library</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <AssemblyName>TsxCode.$(MSBuildProjectName)</AssemblyName>
+        <RootNamespace>TsxCode.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+
+        <!-- Application - Dependencies -->
+        <NuGetAudit>True</NuGetAudit>
+        <NuGetAuditMode>all</NuGetAuditMode>
+
+        <!-- Global Usings - General -->
+        <ImplicitUsings>enable</ImplicitUsings>
+
+        <!-- Build - General -->
+        <Nullable>enable</Nullable>
+
+        <!-- Build - Errors and warnings -->
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+
+        <!-- Build - Output -->
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+
+        <!-- Code Analysis - All analyzers -->
+        <RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
+        <RunAnalyzersDuringLiveAnalysis>True</RunAnalyzersDuringLiveAnalysis>
+
+        <!-- Code Analysis - .NET analyzer -->
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+        <EnableNETAnalyzers>True</EnableNETAnalyzers>
+        <AnalysisLevel>latest</AnalysisLevel>
+
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SampleODataApi.Core\SampleODataApi.Core.csproj">
+            <PrivateAssets>all</PrivateAssets>
+        </ProjectReference>
+        <ProjectReference Include="..\SampleODataApi.UseCases\SampleODataApi.UseCases.csproj">
+            <PrivateAssets>all</PrivateAssets>
+        </ProjectReference>
+    </ItemGroup>
+
+</Project>

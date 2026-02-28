@@ -1,7 +1,6 @@
 ﻿// Copyright (c) 2026 Tomas Svejnoha. All rights reserved.
 
 using TsxCode.SampleODataApi.Core.Aggregates.CustomerAggregate;
-using TsxCode.SampleODataApi.Core.Aggregates.OrderAggregate;
 using TsxCode.SampleODataApi.Core.Interfaces.Repositories;
 
 namespace TsxCode.SampleODataApi.Core.Interfaces
@@ -15,11 +14,6 @@ namespace TsxCode.SampleODataApi.Core.Interfaces
         ///     Gets the repository for accessing and managing <see cref="Customer"/> entities.
         /// </summary>
         ICustomerRepository CustomerRepository { get; }
-
-        /// <summary>
-        ///     Gets the repository for accessing and managing <see cref="Order"/> entities.
-        /// </summary>
-        IOrderRepository OrderRepository { get; }
 
         /// <summary>
         ///     Determines whether or not the database is available and can be connected to.

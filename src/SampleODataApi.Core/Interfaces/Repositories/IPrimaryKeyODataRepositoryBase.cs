@@ -14,15 +14,17 @@ namespace TsxCode.SampleODataApi.Core.Interfaces.Repositories
         where TKey : struct
     {
         /// <summary>
-        ///     Retrieves entities from the data store using OData query options.
+        ///     Returns an <see cref="IQueryable{T}"/> representing the queryable data source for this repository.
         /// </summary>
-        /// <param name="queryOptions">The OData query options.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <remarks>
+        ///     This method provides direct access to the underlying <see cref="IQueryable{T}"/> without executing the query,
+        ///     enabling further LINQ composition (e.g., Where, OrderBy, Select) that can be deferred until enumeration.
+        ///     Use this for building efficient, server-side evaluable queries, especially in Domain-Driven Design or Clean Architecture patterns.
+        /// </remarks>
         /// <returns>
-        ///     A task that represents the asynchronous operation. The task result contains the enumerable of entities.
+        ///     An <see cref="IQueryable{T}"/> that can be further queried or enumerated.
         /// </returns>
-        /// <exception cref="OperationCanceledException">If the <see cref="CancellationToken" /> is canceled.</exception>
-        Task<IEnumerable<T>> GetAllAsync(ODataQueryOptions<T> queryOptions, CancellationToken cancellationToken = default);
+        IQueryable<T> GetQueryable();
 
         /// <summary>
         ///     Returns the total count of entities of type <typeparamref name="T"/>.

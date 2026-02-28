@@ -1,5 +1,4 @@
 ﻿using Ardalis.GuardClauses;
-using TsxCode.SampleODataApi.Core.Aggregates.OrderAggregate;
 using TsxCode.SampleODataApi.Core.Interfaces;
 
 namespace TsxCode.SampleODataApi.Core.Aggregates.CustomerAggregate
@@ -10,8 +9,6 @@ namespace TsxCode.SampleODataApi.Core.Aggregates.CustomerAggregate
     /// </summary>
     public class Customer : IAggregateRoot
     {
-        private readonly List<Order> _orders = [];
-
         /// <summary>
         ///     Gets or sets the unique identifier for the customer.
         /// </summary>
@@ -30,10 +27,5 @@ namespace TsxCode.SampleODataApi.Core.Aggregates.CustomerAggregate
                 field = value;
             }
         }
-
-        /// <summary>
-        ///     Gets the collection of orders associated with this customer.
-        /// </summary>
-        public IReadOnlyCollection<Order> Orders => _orders;
     }
 }
