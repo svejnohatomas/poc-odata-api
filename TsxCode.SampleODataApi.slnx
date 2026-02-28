@@ -3,6 +3,7 @@
     <Project Path="src/SampleODataApi.Core/SampleODataApi.Core.csproj" Id="514e8b13-c00b-467a-95d2-320abf9591e0" />
     <Project Path="src/SampleODataApi.Infrastructure/SampleODataApi.Infrastructure.csproj" Id="82083aac-b2b1-4d4f-8167-5e353b84be97" />
     <Project Path="src/SampleODataApi.UseCases/SampleODataApi.UseCases.csproj" Id="b22652b7-4fb3-43f4-8766-2b698c1e997e" />
+    <Project Path="src/SampleODataApi.Web/SampleODataApi.Web.csproj" Id="8844734b-cc8d-4f18-b832-aad4a843e0ef" />
   </Folder>
   <Folder Name="/tests/" />
 </Solution>
