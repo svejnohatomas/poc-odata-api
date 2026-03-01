@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.OData;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
 using Microsoft.OpenApi;
-using Restmium.SampleODataApi.Web.Models.Customers.Responses;
+using TsxCode.SampleODataApi.UseCases.Aggregates.CustomerAggregate.Dtos;
 
 namespace Restmium.SampleODataApi.Web
 {
@@ -25,7 +25,7 @@ namespace Restmium.SampleODataApi.Web
             ArgumentNullException.ThrowIfNull(builder);
 
             ODataConventionModelBuilder modelBuilder = new();
-            modelBuilder.EntitySet<CustomerResponseRecord>("Customers");
+            modelBuilder.EntitySet<CustomerDto>("Customers");
             IEdmModel edmModel = modelBuilder.GetEdmModel();
 
             builder.Services.AddControllers().AddOData(options => options.AddRouteComponents(edmModel));

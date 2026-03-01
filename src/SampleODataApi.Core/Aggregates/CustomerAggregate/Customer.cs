@@ -17,15 +17,6 @@ namespace TsxCode.SampleODataApi.Core.Aggregates.CustomerAggregate
         /// <summary>
         ///     Gets or sets the customer's full name.
         /// </summary>
-        public required string Name
-        {
-            get;
-            set
-            {
-                _ = Guard.Against.NullOrWhiteSpace(value);
-                _ = Guard.Against.LengthOutOfRange(value, CustomerConstants.NameMinLength, CustomerConstants.NameMaxLength);
-                field = value;
-            }
-        }
+        public required string Name { get; set; }
     }
 }

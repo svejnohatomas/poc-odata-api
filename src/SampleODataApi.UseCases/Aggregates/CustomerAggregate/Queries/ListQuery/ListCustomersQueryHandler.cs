@@ -27,6 +27,9 @@ namespace TsxCode.SampleODataApi.UseCases.Aggregates.CustomerAggregate.Queries.L
 
             IQueryable<Customer> query = unitOfWork.CustomerRepository.GetQueryable();
 
+            // Cannot apply ODataQueryOptions of 'TsxCode.SampleODataApi.UseCases.Aggregates.CustomerAggregate.Dtos.CustomerDto' to IQueryable of 'TsxCode.SampleODataApi.Core.Aggregates.CustomerAggregate.Customer'. (Parameter 'query')
+            query = (IQueryable<Customer>)request.Options.ApplyTo(query); // ODataQueryOptions<CustomerDto>
+
             IEnumerable<CustomerDto> result = query.Select(CustomerDto.From);
 
             return Task.FromResult(result);

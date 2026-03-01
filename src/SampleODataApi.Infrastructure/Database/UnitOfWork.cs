@@ -5,9 +5,9 @@ using TsxCode.SampleODataApi.Core.Interfaces.Repositories;
 
 namespace TsxCode.SampleODataApi.Infrastructure.Database
 {
-    internal sealed class UnitOfWork : IUnitOfWork
+    internal sealed class UnitOfWork(ICustomerRepository customerRepository) : IUnitOfWork
     {
-        public ICustomerRepository CustomerRepository => throw new NotImplementedException();
+        public ICustomerRepository CustomerRepository => customerRepository;
 
         public Task<bool> CanConnectAsync(CancellationToken cancellationToken = default)
         {

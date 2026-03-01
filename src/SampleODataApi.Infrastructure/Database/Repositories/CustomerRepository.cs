@@ -5,34 +5,19 @@ namespace TsxCode.SampleODataApi.Infrastructure.Database.Repositories
 {
     internal sealed class CustomerRepository : ICustomerRepository
     {
-        private readonly List<Customer> _customers =
-        [
-            new()
+        public CustomerRepository()
+        {
+            for (int i = 1; i <= 10; i++)
             {
-                Id = Guid.NewGuid(),
-                Name = "Customer A",
-            },
-            new()
-            {
-                Id = Guid.NewGuid(),
-                Name = "Customer B",
-            },
-            new()
-            {
-                Id = Guid.NewGuid(),
-                Name = "Customer C",
-            },
-            new()
-            {
-                Id = Guid.NewGuid(),
-                Name = "Customer D",
-            },
-            new()
-            {
-                Id = Guid.NewGuid(),
-                Name = "Customer E",
-            },
-        ];
+                _customers.Add(new Customer
+                {
+                    Id = Guid.NewGuid(),
+                    Name = $"Customer {i}",
+                });
+            }
+        }
+
+        private readonly List<Customer> _customers = [];
 
         public IQueryable<Customer> GetQueryable()
         {
