@@ -10,7 +10,7 @@ namespace TsxCode.SampleODataApi.UseCases.Aggregates.CustomerAggregate.Queries.L
     ///     Handles the <see cref="ListCustomersQuery"/> to retrieve a list of customers asynchronously.
     /// </summary>
     /// <param name="unitOfWork">The unit of work providing access to the customer repository.</param>
-    internal sealed class ListCustomersQueryHandler(IUnitOfWork unitOfWork)
+    public sealed class ListCustomersQueryHandler(IUnitOfWork unitOfWork)
     {
         /// <summary>
         ///     Executes the query to fetch customers and maps them to DTOs.
