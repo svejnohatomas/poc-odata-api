@@ -2,11 +2,13 @@
 
 using Restmium.SampleODataApi.Web;
 using TsxCode.SampleODataApi.Infrastructure;
+using TsxCode.SampleODataApi.UseCases;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.ConfigureWeb()
+    .ConfigureUseCases()
     .ConfigureInfrastructure();
 
 var app = builder.Build();

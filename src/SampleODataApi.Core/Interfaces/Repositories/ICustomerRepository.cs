@@ -10,5 +10,5 @@ namespace TsxCode.SampleODataApi.Core.Interfaces.Repositories
     /// <remarks>
     ///     Inherits standard CRUD and primary key-based OData operations for customers.
     /// </remarks>
-    public interface ICustomerRepository : IPrimaryKeyODataRepositoryBase<Customer, Guid>;
+    public interface ICustomerRepository : IPrimaryKeyODataRepositoryBase<Customer>;
 }
